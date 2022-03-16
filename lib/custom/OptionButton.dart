@@ -17,25 +17,26 @@ class OptionButton extends StatelessWidget {
     return Container(
       width: width,
       child: FlatButton(
-        color: COLOR_DARK_BLUE,
-        splashColor: COLOR_WHITE.withAlpha(55),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-        onPressed: () {},
-        child: Row(
-          children: [
-            Icon(
-              icon,
-              color: COLOR_WHITE,
-            ),
-            addHorizontalSpace(10),
-            Text(
-              text,
-              style: const TextStyle(color: COLOR_WHITE),
-            )
-          ],
-        ),
-      ),
+          color: COLOR_DARK_BLUE,
+          splashColor: Colors.white.withAlpha(55),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          onPressed: () {},
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                icon,
+                color: COLOR_WHITE,
+              ),
+              addHorizontalSpace(10),
+              Text(
+                text,
+                style: TextStyle(color: COLOR_WHITE),
+              )
+            ],
+          )),
     );
   }
 }
